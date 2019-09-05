@@ -57,22 +57,22 @@ make docs
 To allow for scheduling all tasks must inherit from the `Task`-class and override the `run`-method:
 
 ```javascript
-import { Task } from "osek"
+import { Task } from "Task"
 
 class MyTask extends Task {
-    // @osek
+    // @rtjs
     *run() {
         // implement your task here
     }
 }
 ```
 
-Note that every method that should be transformed needs to be prefixed by the `@osek`-decorator. Functions can also be made schedulable and preemtible by simply prefixing them with the same `@osek`-decorator (or inside a comment for pure JavaScript `// @osek`).
+Note that every method that should be transformed needs to be prefixed by the `@rtjs`-decorator. Functions can also be made schedulable and preemtible by simply prefixing them with the same `@rtjs`-decorator (or inside a comment for pure JavaScript `// @rtjs`).
 
-To transpile the code use the `osek-transpiler.js` tool in `build/bin`, e.g.:
+To transpile the code use the `rtjs-transpiler.js` tool in `build/bin`, e.g.:
 
 ```
-osek-transpiler "src/*.js"
+rtjs-transpiler "src/*.js"
 ```
 
 > NOTE: Currently the output directory is always `build`
