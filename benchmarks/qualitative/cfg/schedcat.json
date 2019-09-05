@@ -1,0 +1,71 @@
+[
+    {
+       "properties": {
+            "hyperperiod": 4162620000,
+            "utilization": 0.7493668980
+        },
+        "tasks": [
+            { "wcet": 56.0000000000, "period": 2000, "utilization": 0.0280000000 },
+            { "wcet": 738.0000000000, "period": 10000, "utilization": 0.0738000000 },
+            { "wcet": 1615.0000000000, "period": 53000, "utilization": 0.0304716981 },
+            { "wcet": 1815.0000000000, "period": 12000, "utilization": 0.1512500000 },
+            { "wcet": 43.0000000000, "period": 2000, "utilization": 0.0215000000 },
+            { "wcet": 1280.0000000000, "period": 17000, "utilization": 0.0752941176 },
+            { "wcet": 506.0000000000, "period": 6000, "utilization": 0.0843333333 },
+            { "wcet": 178.0000000000, "period": 10000, "utilization": 0.0178000000 },
+            { "wcet": 101.0000000000, "period": 2000, "utilization": 0.0505000000 },
+            { "wcet": 29.0000000000, "period": 1000, "utilization": 0.0290000000 },
+            { "wcet": 998.0000000000, "period": 28000, "utilization": 0.0356428571 },
+            { "wcet": 629.0000000000, "period": 33000, "utilization": 0.0190606061 },
+            { "wcet": 87.0000000000, "period": 1000, "utilization": 0.0870000000 },
+            { "wcet": 45.0000000000, "period": 1000, "utilization": 0.0450000000 },
+            { "wcet": 15.0000000000, "period": 21000, "utilization": 0.0007142857 }
+        ]
+    },
+    {
+       "properties": {
+            "hyperperiod": 75115323140000,
+            "utilization": 0.7490839316
+        },
+        "tasks": [
+            { "wcet": 3005.0000000000, "period": 95000, "utilization": 0.0316315789 },
+            { "wcet": 64.0000000000, "period": 13000, "utilization": 0.0049230769 },
+            { "wcet": 698.0000000000, "period": 5000, "utilization": 0.1396000000 },
+            { "wcet": 73.0000000000, "period": 1000, "utilization": 0.0730000000 },
+            { "wcet": 5199.0000000000, "period": 61000, "utilization": 0.0852295082 },
+            { "wcet": 13331.0000000000, "period": 55000, "utilization": 0.2423818182 },
+            { "wcet": 33.0000000000, "period": 4000, "utilization": 0.0082500000 },
+            { "wcet": 17.0000000000, "period": 1000, "utilization": 0.0170000000 },
+            { "wcet": 110.0000000000, "period": 31000, "utilization": 0.0035483871 },
+            { "wcet": 39.0000000000, "period": 5000, "utilization": 0.0078000000 },
+            { "wcet": 7.0000000000, "period": 1000, "utilization": 0.0070000000 },
+            { "wcet": 831.0000000000, "period": 17000, "utilization": 0.0488823529 },
+            { "wcet": 3132.0000000000, "period": 43000, "utilization": 0.0728372093 },
+            { "wcet": 1.0000000000, "period": 1000, "utilization": 0.0010000000 },
+            { "wcet": 6.0000000000, "period": 1000, "utilization": 0.0060000000 }
+        ]
+    },
+    {
+       "properties": {
+            "hyperperiod": 6770400000,
+            "utilization": 0.7507507927
+        },
+        "tasks": [
+            { "wcet": 49.0000000000, "period": 1000, "utilization": 0.0490000000 },
+            { "wcet": 31.0000000000, "period": 1000, "utilization": 0.0310000000 },
+            { "wcet": 17.0000000000, "period": 1000, "utilization": 0.0170000000 },
+            { "wcet": 1216.0000000000, "period": 31000, "utilization": 0.0392258065 },
+            { "wcet": 1168.0000000000, "period": 20000, "utilization": 0.0584000000 },
+            { "wcet": 82.0000000000, "period": 3000, "utilization": 0.0273333333 },
+            { "wcet": 98.0000000000, "period": 13000, "utilization": 0.0075384615 },
+            { "wcet": 4152.0000000000, "period": 25000, "utilization": 0.1660800000 },
+            { "wcet": 2089.0000000000, "period": 32000, "utilization": 0.0652812500 },
+            { "wcet": 428.0000000000, "period": 78000, "utilization": 0.0054871795 },
+            { "wcet": 306.0000000000, "period": 5000, "utilization": 0.0612000000 },
+            { "wcet": 59.0000000000, "period": 5000, "utilization": 0.0118000000 },
+            { "wcet": 1159.0000000000, "period": 7000, "utilization": 0.1655714286 },
+            { "wcet": 41.0000000000, "period": 1000, "utilization": 0.0410000000 },
+            { "wcet": 29.0000000000, "period": 6000, "utilization": 0.0048333333 }
+        ]
+    }
+]

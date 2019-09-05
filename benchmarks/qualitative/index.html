@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Qualitative Scheduler Benchmark</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/aes.js"></script>
+    <script src="js/bundle.js"></script>
+</head>
+<body>
+    <div id="info">
+        <input type="checkbox" id="toggleTest" name="toggleTest" />
+        <label for="toggleTest" id="toggleTestLabel">Run Benchmark</label>
+        <br />
+        <input type="checkbox" id="togglertjs" name="togglertjs" />
+	<label for="togglertjs">Enable RT.js Scheduler</label>
+        <br />
+        <input type="checkbox" id="toggleSchedcat" name="toggleSchedcat" />
+        <label for="toggleSchedcat">Enable Schedcat Load</label>
+        <br />
+        <input type="checkbox" id="toggleEncrypt" name="toggleEncrypt" />
+        <label for="toggleEncrypt">Encrypt Input</label>
+        <br />
+        <input type="checkbox" id="toggleAnimate" name="toggleAnimate" checked />
+        <label for="toggleAnimate">Animate Box</label>
+    </div>
+    <div id="box">I'm moving! \o/</div>
+
+    <div id="input_test">
+        <input type="text" id="inputTextBox" placeholder="Input text...">
+        <div>
+            <span id="key_delay">0ms | Avg: 0ms | min: 0 | max: 0</span>
+            <span id="task_delay"></span>
+        </div>
+        <span><small>(shows length of key pressed)</small></span>
+        <ol id="output_list">
+        </ol>
+    </div>
+
+    <div id="output_div">
+        <div id="window_close">X</div>
+        <h2>Results</h2>
+        <p>These are the results of a single benchmark run. Single values have been dumped to Console.log.</p>
+        <div id="plotly_output_div">
+        </div>
+
+        <p>Abbreviations:
+        <ul>
+            <li>RTC - Run-To-Completion</li>
+            <li>SC - SchedCAT</li>
+            <li>AES - AES encryption on Input Task is enabled</li>
+        </ul></p>
+
+        <table>
+            <tr>
+                <th></th><th>AVG [fps]</th><th>Max [fps]</th><th>Min [fps]</th>
+            </tr><tr id="table_0">
+                <td class="grace">1st Grace Period</td><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_1">
+                <th>RTC no load</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_2">
+                <th>RTC AES</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_3">
+                <th>RTC SchedCAT</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_4">
+                <th>RTC SchedCAT + AES</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_5">
+                <td class="grace">2nd Grace Period</td><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_6">
+                <th>RT.js no load</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_7">
+                <th>RT.js AES</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_8">
+                <th>RT.js SchedCAT</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr><tr id="table_9">
+                <th>RT.js SchedCAT + AES</th><td class="avg"></td><td class="max"></td><td class="min"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
