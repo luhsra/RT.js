@@ -1,12 +1,21 @@
 # RT.js: Practical Real-Time Scheduling for Web Applications
 
-RT.js is a framework that provides preemptive and prioritized scheduling of JavaScript jobs. JavaScript interpreters run as a single processor with a run-to-completion semantics. Every event handler in JavaScript is a job to the execution engine, which is run until it is done, with no way of yielding the execution engine for a job, which is more important or for rendering the web-page. In fact a JavaScript event handler may busy wait on something and starve all other jobs, including the renderer of the web browser.
+RT.js is a framework that provides preemptive and prioritized scheduling of JavaScript jobs.
+JavaScript interpreters execute all jobs (i.e., event handlers) strictly in order and in a run-to-completion semantic.
+While a job is being executed, there is no way to yield the execution engine before the calculation has finished.
+Meanwhile, not only the JS-interpreter thread is blocked, but, more importantly, the rendering of the web page is delayed until the interpreter handed back control to the rendering engine.
+In fact, a JavaScript event handler may busy wait on something and starve all other jobs, the renderer of the browser tab, and the whole web page.
+We can see the effect of long running computations in a benchmark where computation-intense JS code is competing with UI update code for the interpreter. The benchmark can also be found [here](https://www.sra.uni-hannover.de/Research/rtjs/demo.html).
 
 ![](macro-benchmark.png)
 
-RT.js resolves that automatically by transpiling (i.e. source-to-source compiling) the JavaScript code and adding preemption points to the code. RT.js jobs are run through the scheduler, which checks the time budgets for the jobs when they hit a preemption point (i.e. return to the scheduler). The scheduler may resume execution, schedule a different job (with a higher priority) or stop JavaScript execution alltogether, so the browser may decide what to do next.
+RT.js tackles this problem by inserting explicit preemption points into long-running JS functions via transpilation (i.e., source-to-source compiling) of the source code.
+We provide an abstraction to submit such transpiled functions as RT.js jobs with a given scheduling priority or with a relative execution deadline.
+The RT.js scheduler executes the given jobs according to their relative importance, periodically regains control over the interpreter by the inserted preemption points, and regularly returns to the browser, which then can decide what to do next (e.g., page rendering).
 
-The transpiler converts every function marked with the `@rtjs` or `// @rtjs` decorator to a generator function, meaning that the run-time system allows returning from that function prematurely and re-entry into that function. The run-time system keeps the state of the function and the local objects. Preemption points are added by inserting `yield`-statements on the following occasions:
+The transpiler achieves preemptability by converting every function marked with the `@rtjs` or `// @rtjs` decorator to a generator function, meaning that the run-time system allows returning from that function prematurely and re-entry into that function.
+The run-time system keeps the state of the function and the local objects.
+Preemption points are added by inserting `yield`-statements on the following occasions:
 
 - before `while` and `for` loop bodies, i.e. on every iteration of the loop
 - before function calls
@@ -23,7 +32,7 @@ Both [Mozilla][2] and [Google][1] suggest either not using the main-thread (i.e.
 - `src` contains the main source files for the runtime and transpiler (source to source compiler).
 - `src/transpiler` contains the transpiler code.
 - `benchmarks` contains a number of benchmarks of different kinds.
-  - `benchmarks/qualitative` is the macro benchmark from the RTSS publication. It contains a website running in a browser showcasing RT.js against the default run-to-completion policy of the JavaScript run-time engine. (you'll need `plotly-base` to use that benchmark)
+  - `benchmarks/qualitative` is the macro benchmark from the RTSS publication. It contains a website running in a browser showcasing RT.js against the default run-to-completion policy of the JavaScript run-time engine. (you'll need `plotly-base` to use that benchmark).
   - `benchmarks/minimal` contains a small example project that uses RT.js to introduce pseudo-preemptivity.
 
 After building the transpiler (see below), the `build`-folder exists, containing the transpiled RT.js library and the transpiler, ready for use.
