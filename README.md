@@ -18,43 +18,23 @@ Both [Mozilla][2] and [Google][1] suggest either not using the main-thread (i.e.
 
 > [RT.js: Practical Real-Time Scheduling for Web Applications](https://www.sra.uni-hannover.de/Publications/publications.html#dietrich:19:rtss). Christian Dietrich, Stefan Naumann, Robin Thrift, Daniel Lohmann. Proceedings of the 40th IEEE Real-Time Systems Symposium 2019. IEEE Computer Society Press. 2019
 
-## Project Structure
+## Project Directory Structure
 
 - `src` contains the main source files for the runtime and transpiler (source to source compiler).
 - `src/transpiler` contains the transpiler code.
 - `benchmarks` contains a number of benchmarks of different kinds.
+  - `benchmarks/qualitative` is the macro benchmark from the RTSS publication. It contains a website running in a browser showcasing RT.js against the default run-to-completion policy of the JavaScript run-time engine. (you'll need `plotly-base` to use that benchmark)
+  - `benchmarks/minimal` contains a small example project that uses RT.js to introduce pseudo-preemptivity.
 
 After building the transpiler (see below), the `build`-folder exists, containing the transpiled RT.js library and the transpiler, ready for use.
 
-## Set up
+## Installation and Setup
 
-`npm install` to install all required dependencies.
+- `npm install`: Install all required dependencies (especially TypeScript).
+- `make build`: Build the RT.js transpiler. Please note: The benchmarks will build the transpiler as an dependency.
+- `make docs`: Generate a browsable version of the API docs in ./docs
 
-## Benchmarks and Examples
-
-One benchmarks and a minimal example are contained withing the `benchmarks` folder:
-
-- `qualitative` is the macro benchmark, a website running in a browser showcasing RT.js against the default run-to-completion policy of the JavaScript run-time engine. (you'll need `plotly-base` to use that benchmark)
-
-The minimal example for creating an own website with RT.js can be found in the `minimal`-folder.
-
-## RT.js
-
-### Building
-
-Building the RT.js transpiler (note: the benchmarks build the transpiler themselves, if needed):
-
-```
-make build
-```
-
-Generate a browsable version of the API docs in ./docs
-
-```
-make docs
-```
-
-### Basic Usage
+## Basic Usage
 
 To allow for scheduling all tasks must inherit from the `Task`-class and override the `run`-method:
 
@@ -64,6 +44,10 @@ import { Task } from "Task"
 class MyTask extends Task {
     // @rtjs
     *run() {
+        var i = 0;
+        while (i < 1000000) {
+           i++;
+        }
         // implement your task here
     }
 }
@@ -71,10 +55,11 @@ class MyTask extends Task {
 
 Note that every method that should be transformed needs to be prefixed by the `@rtjs`-decorator. Functions can also be made schedulable and preemtible by simply prefixing them with the same `@rtjs`-decorator (or inside a comment for pure JavaScript `// @rtjs`).
 
-To transpile the code use the `rtjs-transpiler.js` tool in `build/bin`, e.g.:
+To transpile the code use the `rtjs-transpiler.js` tool in `build/transpiler`, e.g.:
 
 ```
-rtjs-transpiler "src/*.js"
+build/transpiler/rtjs-transpiler "MyTask.js"
+cat build/MyTask.js
 ```
 
 > NOTE: Currently the output directory is always `build`
