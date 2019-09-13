@@ -4,7 +4,9 @@ A real-time capable pseudo-preemptive scheduler for JavaScript.
 
 ## What does it do?
 
-RT.js is a framework for scheduling jobs in JavaScript. JavaScript interpreters run as a single processor with a run-to-completion semantics. Every event handler in JavaScript is a job to the execution engine, which is run until it is done, with no way of yielding the execution engine for a job, which is more important or for rendering the web-page. In fact a JavaScript event handler may busy wait on something and starve all other jobs, including the renderer of the web browser.
+![](macro-benchmark.png)
+
+RT.js is a framework that provides preemptive and prioritized scheduling of JavaScript jobs. JavaScript interpreters run as a single processor with a run-to-completion semantics. Every event handler in JavaScript is a job to the execution engine, which is run until it is done, with no way of yielding the execution engine for a job, which is more important or for rendering the web-page. In fact a JavaScript event handler may busy wait on something and starve all other jobs, including the renderer of the web browser.
 
 RT.js resolves that automatically by transpiling (i.e. source-to-source compiling) the JavaScript code and adding preemption points to the code. RT.js jobs are run through the scheduler, which checks the time budgets for the jobs when they hit a preemption point (i.e. return to the scheduler). The scheduler may resume execution, schedule a different job (with a higher priority) or stop JavaScript execution alltogether, so the browser may decide what to do next.
 
