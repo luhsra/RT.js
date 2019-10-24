@@ -1,0 +1,832 @@
+[
+  {
+    "properties": {
+      "hyperperiod": 83920200,
+      "utilization": 0.0346618335
+    },
+    "tasks": [
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 70,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 30,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 30,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 18,
+        "period": 1050,
+        "utilization": 0.0171428571
+      },
+      {
+        "wcet": 2,
+        "period": 1060,
+        "utilization": 0.0018867925
+      },
+      {
+        "wcet": 1,
+        "period": 435,
+        "utilization": 0.0022988506
+      },
+      {
+        "wcet": 0,
+        "period": 130,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 40,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 20,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 65,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 65,
+        "utilization": 0
+      },
+      {
+        "wcet": 2,
+        "period": 150,
+        "utilization": 0.0133333333
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 200158111717200,
+      "utilization": 0.1577497301
+    },
+    "tasks": [
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 2,
+        "period": 120,
+        "utilization": 0.0166666667
+      },
+      {
+        "wcet": 13,
+        "period": 720,
+        "utilization": 0.0180555556
+      },
+      {
+        "wcet": 1,
+        "period": 195,
+        "utilization": 0.0051282051
+      },
+      {
+        "wcet": 15,
+        "period": 4140,
+        "utilization": 0.0036231884
+      },
+      {
+        "wcet": 1,
+        "period": 100,
+        "utilization": 0.01
+      },
+      {
+        "wcet": 4,
+        "period": 90,
+        "utilization": 0.0444444444
+      },
+      {
+        "wcet": 1,
+        "period": 105,
+        "utilization": 0.0095238095
+      },
+      {
+        "wcet": 3,
+        "period": 490,
+        "utilization": 0.006122449
+      },
+      {
+        "wcet": 1,
+        "period": 40,
+        "utilization": 0.025
+      },
+      {
+        "wcet": 1,
+        "period": 95,
+        "utilization": 0.0105263158
+      },
+      {
+        "wcet": 33,
+        "period": 4340,
+        "utilization": 0.0076036866
+      },
+      {
+        "wcet": 0,
+        "period": 85,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 85,
+        "utilization": 0
+      },
+      {
+        "wcet": 4,
+        "period": 3790,
+        "utilization": 0.001055409
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 1608914135240100,
+      "utilization": 0.2550217489
+    },
+    "tasks": [
+      {
+        "wcet": 1,
+        "period": 25,
+        "utilization": 0.04
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 47,
+        "period": 1950,
+        "utilization": 0.0241025641
+      },
+      {
+        "wcet": 25,
+        "period": 555,
+        "utilization": 0.045045045
+      },
+      {
+        "wcet": 22,
+        "period": 1035,
+        "utilization": 0.0212560386
+      },
+      {
+        "wcet": 2,
+        "period": 725,
+        "utilization": 0.0027586207
+      },
+      {
+        "wcet": 5,
+        "period": 810,
+        "utilization": 0.0061728395
+      },
+      {
+        "wcet": 4,
+        "period": 75,
+        "utilization": 0.0533333333
+      },
+      {
+        "wcet": 10,
+        "period": 1580,
+        "utilization": 0.0063291139
+      },
+      {
+        "wcet": 16,
+        "period": 1105,
+        "utilization": 0.014479638
+      },
+      {
+        "wcet": 0,
+        "period": 65,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 30,
+        "utilization": 0
+      },
+      {
+        "wcet": 16,
+        "period": 650,
+        "utilization": 0.0246153846
+      },
+      {
+        "wcet": 1,
+        "period": 230,
+        "utilization": 0.0043478261
+      },
+      {
+        "wcet": 29,
+        "period": 2305,
+        "utilization": 0.0125813449
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 11050943400,
+      "utilization": 0.2947299003
+    },
+    "tasks": [
+      {
+        "wcet": 0,
+        "period": 175,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 25,
+        "utilization": 0
+      },
+      {
+        "wcet": 5,
+        "period": 280,
+        "utilization": 0.0178571429
+      },
+      {
+        "wcet": 24,
+        "period": 2835,
+        "utilization": 0.0084656085
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 2,
+        "period": 300,
+        "utilization": 0.0066666667
+      },
+      {
+        "wcet": 33,
+        "period": 570,
+        "utilization": 0.0578947368
+      },
+      {
+        "wcet": 1,
+        "period": 25,
+        "utilization": 0.04
+      },
+      {
+        "wcet": 5,
+        "period": 95,
+        "utilization": 0.0526315789
+      },
+      {
+        "wcet": 14,
+        "period": 210,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 2,
+        "period": 1260,
+        "utilization": 0.0015873016
+      },
+      {
+        "wcet": 6,
+        "period": 460,
+        "utilization": 0.0130434783
+      },
+      {
+        "wcet": 3,
+        "period": 2230,
+        "utilization": 0.0013452915
+      },
+      {
+        "wcet": 1,
+        "period": 35,
+        "utilization": 0.0285714286
+      },
+      {
+        "wcet": 0,
+        "period": 30,
+        "utilization": 0
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 336725626433856800000,
+      "utilization": 0.3862028664
+    },
+    "tasks": [
+      {
+        "wcet": 1,
+        "period": 80,
+        "utilization": 0.0125
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 18,
+        "period": 225,
+        "utilization": 0.08
+      },
+      {
+        "wcet": 17,
+        "period": 495,
+        "utilization": 0.0343434343
+      },
+      {
+        "wcet": 2,
+        "period": 155,
+        "utilization": 0.0129032258
+      },
+      {
+        "wcet": 3,
+        "period": 145,
+        "utilization": 0.0206896552
+      },
+      {
+        "wcet": 16,
+        "period": 2050,
+        "utilization": 0.007804878
+      },
+      {
+        "wcet": 0,
+        "period": 25,
+        "utilization": 0
+      },
+      {
+        "wcet": 10,
+        "period": 4505,
+        "utilization": 0.0022197558
+      },
+      {
+        "wcet": 7,
+        "period": 580,
+        "utilization": 0.0120689655
+      },
+      {
+        "wcet": 23,
+        "period": 2605,
+        "utilization": 0.0088291747
+      },
+      {
+        "wcet": 243,
+        "period": 3015,
+        "utilization": 0.0805970149
+      },
+      {
+        "wcet": 75,
+        "period": 815,
+        "utilization": 0.0920245399
+      },
+      {
+        "wcet": 1,
+        "period": 45,
+        "utilization": 0.0222222222
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 156441522924553600000000,
+      "utilization": 0.5594142808
+    },
+    "tasks": [
+      {
+        "wcet": 1,
+        "period": 20,
+        "utilization": 0.05
+      },
+      {
+        "wcet": 33,
+        "period": 450,
+        "utilization": 0.0733333333
+      },
+      {
+        "wcet": 0,
+        "period": 2030,
+        "utilization": 0
+      },
+      {
+        "wcet": 1,
+        "period": 150,
+        "utilization": 0.0066666667
+      },
+      {
+        "wcet": 8,
+        "period": 940,
+        "utilization": 0.0085106383
+      },
+      {
+        "wcet": 217,
+        "period": 4810,
+        "utilization": 0.0451143451
+      },
+      {
+        "wcet": 15,
+        "period": 650,
+        "utilization": 0.0230769231
+      },
+      {
+        "wcet": 53,
+        "period": 3050,
+        "utilization": 0.0173770492
+      },
+      {
+        "wcet": 53,
+        "period": 1465,
+        "utilization": 0.0361774744
+      },
+      {
+        "wcet": 1,
+        "period": 15,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 14,
+        "period": 115,
+        "utilization": 0.1217391304
+      },
+      {
+        "wcet": 1,
+        "period": 785,
+        "utilization": 0.0012738854
+      },
+      {
+        "wcet": 1,
+        "period": 15,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 134,
+        "period": 3130,
+        "utilization": 0.0428115016
+      },
+      {
+        "wcet": 0,
+        "period": 25,
+        "utilization": 0
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 2531686686788233500000,
+      "utilization": 0.6190972359
+    },
+    "tasks": [
+      {
+        "wcet": 6,
+        "period": 125,
+        "utilization": 0.048
+      },
+      {
+        "wcet": 155,
+        "period": 930,
+        "utilization": 0.1666666667
+      },
+      {
+        "wcet": 19,
+        "period": 580,
+        "utilization": 0.0327586207
+      },
+      {
+        "wcet": 53,
+        "period": 1385,
+        "utilization": 0.038267148
+      },
+      {
+        "wcet": 45,
+        "period": 2250,
+        "utilization": 0.02
+      },
+      {
+        "wcet": 146,
+        "period": 4955,
+        "utilization": 0.0294651867
+      },
+      {
+        "wcet": 8,
+        "period": 225,
+        "utilization": 0.0355555556
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 3,
+        "period": 735,
+        "utilization": 0.0040816327
+      },
+      {
+        "wcet": 398,
+        "period": 4795,
+        "utilization": 0.0830031283
+      },
+      {
+        "wcet": 25,
+        "period": 435,
+        "utilization": 0.0574712644
+      },
+      {
+        "wcet": 0,
+        "period": 80,
+        "utilization": 0
+      },
+      {
+        "wcet": 0,
+        "period": 15,
+        "utilization": 0
+      },
+      {
+        "wcet": 5,
+        "period": 60,
+        "utilization": 0.0833333333
+      },
+      {
+        "wcet": 29,
+        "period": 1415,
+        "utilization": 0.0204946996
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 108460435470660000,
+      "utilization": 0.7710895176
+    },
+    "tasks": [
+      {
+        "wcet": 19,
+        "period": 390,
+        "utilization": 0.0487179487
+      },
+      {
+        "wcet": 1,
+        "period": 570,
+        "utilization": 0.001754386
+      },
+      {
+        "wcet": 1,
+        "period": 15,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 34,
+        "period": 1215,
+        "utilization": 0.0279835391
+      },
+      {
+        "wcet": 2,
+        "period": 155,
+        "utilization": 0.0129032258
+      },
+      {
+        "wcet": 3,
+        "period": 35,
+        "utilization": 0.0857142857
+      },
+      {
+        "wcet": 89,
+        "period": 2105,
+        "utilization": 0.042280285
+      },
+      {
+        "wcet": 112,
+        "period": 2300,
+        "utilization": 0.0486956522
+      },
+      {
+        "wcet": 2,
+        "period": 40,
+        "utilization": 0.05
+      },
+      {
+        "wcet": 154,
+        "period": 4960,
+        "utilization": 0.0310483871
+      },
+      {
+        "wcet": 623,
+        "period": 2565,
+        "utilization": 0.2428849903
+      },
+      {
+        "wcet": 36,
+        "period": 650,
+        "utilization": 0.0553846154
+      },
+      {
+        "wcet": 23,
+        "period": 1935,
+        "utilization": 0.0118863049
+      },
+      {
+        "wcet": 9,
+        "period": 625,
+        "utilization": 0.0144
+      },
+      {
+        "wcet": 2,
+        "period": 65,
+        "utilization": 0.0307692308
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 258894141105600,
+      "utilization": 0.84333957
+    },
+    "tasks": [
+      {
+        "wcet": 1,
+        "period": 135,
+        "utilization": 0.0074074074
+      },
+      {
+        "wcet": 0,
+        "period": 30,
+        "utilization": 0
+      },
+      {
+        "wcet": 9,
+        "period": 75,
+        "utilization": 0.12
+      },
+      {
+        "wcet": 2,
+        "period": 455,
+        "utilization": 0.0043956044
+      },
+      {
+        "wcet": 16,
+        "period": 1320,
+        "utilization": 0.0121212121
+      },
+      {
+        "wcet": 1,
+        "period": 130,
+        "utilization": 0.0076923077
+      },
+      {
+        "wcet": 333,
+        "period": 4550,
+        "utilization": 0.0731868132
+      },
+      {
+        "wcet": 0,
+        "period": 355,
+        "utilization": 0
+      },
+      {
+        "wcet": 1359,
+        "period": 4995,
+        "utilization": 0.2720720721
+      },
+      {
+        "wcet": 0,
+        "period": 265,
+        "utilization": 0
+      },
+      {
+        "wcet": 18,
+        "period": 320,
+        "utilization": 0.05625
+      },
+      {
+        "wcet": 128,
+        "period": 1505,
+        "utilization": 0.0850498339
+      },
+      {
+        "wcet": 4,
+        "period": 60,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 1,
+        "period": 15,
+        "utilization": 0.0666666667
+      },
+      {
+        "wcet": 51,
+        "period": 710,
+        "utilization": 0.0718309859
+      }
+    ]
+  },
+  {
+    "properties": {
+      "hyperperiod": 2555016677464108700000,
+      "utilization": 0.9398448308
+    },
+    "tasks": [
+      {
+        "wcet": 20,
+        "period": 630,
+        "utilization": 0.0317460317
+      },
+      {
+        "wcet": 1,
+        "period": 530,
+        "utilization": 0.0018867925
+      },
+      {
+        "wcet": 2,
+        "period": 25,
+        "utilization": 0.08
+      },
+      {
+        "wcet": 8,
+        "period": 820,
+        "utilization": 0.0097560976
+      },
+      {
+        "wcet": 240,
+        "period": 1935,
+        "utilization": 0.1240310078
+      },
+      {
+        "wcet": 438,
+        "period": 3100,
+        "utilization": 0.1412903226
+      },
+      {
+        "wcet": 7,
+        "period": 1145,
+        "utilization": 0.0061135371
+      },
+      {
+        "wcet": 1,
+        "period": 30,
+        "utilization": 0.0333333333
+      },
+      {
+        "wcet": 33,
+        "period": 285,
+        "utilization": 0.1157894737
+      },
+      {
+        "wcet": 16,
+        "period": 475,
+        "utilization": 0.0336842105
+      },
+      {
+        "wcet": 167,
+        "period": 1345,
+        "utilization": 0.1241635688
+      },
+      {
+        "wcet": 43,
+        "period": 1155,
+        "utilization": 0.0372294372
+      },
+      {
+        "wcet": 2,
+        "period": 35,
+        "utilization": 0.0571428571
+      },
+      {
+        "wcet": 6,
+        "period": 60,
+        "utilization": 0.1
+      },
+      {
+        "wcet": 19,
+        "period": 435,
+        "utilization": 0.0436781609
+      }
+    ]
+  }
+]
