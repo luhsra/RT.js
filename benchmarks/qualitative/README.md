@@ -11,12 +11,12 @@ The stats in the top right are deliberately not tasks, as they need to be as clo
 
 ## Directories and files
 
-  * ./src -> JavaScript source files
-  * ./cfg -> SchedCAT configuration file
-  * ./osek -> transpiled JavaScript files of the /src-RT.js library
-  * ./build -> directories for intermediately build files (i.e. ones, which went through the transpiler, but were not webpacked yet)
-  * ./js -> output directory for the finished bundle.js
-  * ./css -> CSS file
+  * `./src` JavaScript source files
+  * `./cfg` SchedCAT configuration file
+  * `./osek` transpiled JavaScript files of the /src-RT.js library
+  * `./build` directories for intermediately build files (i.e. ones, which went through the transpiler, but were not webpacked yet)
+  * `./js` output directory for the finished bundle.js
+  * `./css` CSS file
 
 ## Building
 
