@@ -19,6 +19,69 @@ body {
     border-radius: 5px;
 }
 
+.p {
+    font-size:16px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+dd {
+    font-size:14px;
+}
+
+.modal {
+    background: rgba(0,0,0,.35);
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width:100%;
+    height: 100%;
+    z-index: 999999;
+    overflow-x:scroll;
+}
+
+.modal_visible {
+    display: block!important;
+    visibility: visible!important;
+}
+
+.modal_window {
+    background: white;
+    width:85%;
+    border-radius: 5px;
+    padding: 5px 15px 15px 15px;
+    margin: 0 auto;
+}
+
+.modal_x {
+    display: block;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: #808080
+}
+
+.help {
+    border-radius: 200px;
+    border: 1px solid rgba(0,80,155,1);
+    background: rgba(0,80,155,1);
+    color: white;
+    font-weight: bold;
+    font-size:16px;
+    display: block;
+    text-align:center;
+    float: right;
+    width:20px;
+    height: 20px;
+}
+
 .stats {
     position:fixed;
     top:0;
@@ -40,6 +103,7 @@ body {
     bottom: 0;
     color: white;
     font-size: 14px;
+    z-index: 9;
 }
 
 #input_test {

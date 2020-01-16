@@ -7,7 +7,56 @@
     <script src="js/bundle.js"></script>
 </head>
 <body>
+<script>
+var StepTime = 60000;
+function rtjsHelp () {
+    document.querySelector ("#help_window").classList.add ("modal_visible");
+}
+
+function rtjsHelpClose () {
+    document.querySelector ("#help_window").classList.remove ("modal_visible");
+}
+function rtjsTestTimeChange() {
+    var el = parseInt(document.querySelector("#timeTest").value, 10);
+    StepTime = el*1000;
+}
+
+</script>
+    <div class="modal" id="help_window" onclick="rtjsHelpClose();">
+        <div class="modal_window">
+            <a href="javascript:rtjsHelpClose();" class="modal_x">x</a>
+            <h1>Help</h1>
+            <p>This benchmarks serves as a case study on RT.js, a practical real-time scheduler for web applications. It shows, that the standard JavaScript run-to-completion semantics hit their limits, when there are compute intensive operations. Also its First-Come-First-Served (FCFS) scheduling policy does not allow prioritizing jobs over other ones, for example making jobs, which respond to user input, more important than ones, which do background computation.</p><p>
+            RT.js solves that, by introducing Preemption Points ahead-of-time into existing JavaScript code, and scheduling the jobs with its own scheduler. Therefore no modification of the JavaScript engine is necessary.</p>
+            <h3>Links</h3>
+            <ul><li><a href="https://www.sra.uni-hannover.de/Research/rtjs/" title="RT.js Project Website">RT.js Project Website</a></li>
+                <li><a href="https://github.com/luhsra/RT.js" title="RT.js on Github">RT.js on GitHub</a></li>
+                <li><a href="https://www.sra.uni-hannover.de/Publications/2019/dietrich_19_rtss.pdf" title="Published Paper on RT.js">Published Paper on RT.js</a></li>
+            </ul>
+            <h2>Task Types</h2>
+            This benchmark consists of four tasks:
+            <dl>
+                <dt>Box Task</dt><dd>Invoked every frame, moves the box, Deadline: 10ms</dd>
+                <dt>Input Task</dt><dd>Invoked on every ENTER stroke, creates an AES-task, sporadic, Deadline: 100ms</dd>
+                <dt>AES Task</dt><dd>Encrypts the input 250 times and decrypts it again; posts the results in the console, sporadic, Deadline: 500ms</dd>
+                <dt>SchedCAT Task Set</dt><dd>A generated set of tasks (n=15); the jobs buisy wait for their WCET; combined utilization: 0.75; Period in [1,52]s, Deadline = Period, WCET in [15,1815]ms</dd>
+            </dl>
+            <h2>Options</h2>
+            <dl>
+                <dt>Step Length<dt><dd>Denotes the amount of seconds each subtest runs, i.e. how long only the box animation is active, then the box+input, box+schedcat, box+schedcat+input; rt.js+box,...</dd>
+                <dt>Run Benchmark</dt><dd>Run automatic tests, switching every permutation of the options on; running with JavaScript semantics (every job will run-to-completion, without any preemption, in a strict first-come-first-served manner. Data will be automatically input for the input-task to process.</dd>
+                <dt>Enable RT.js Scheduler</dt><dd>Switch between the JavaScript scheduling scheme (run-to-completion, with a first-come-first served policy) and our RT.js scheduler (pseudo-preemption between jobs with an earliest deadline first polcy).</dd>
+                <dt>Enable SchedCAT load</dt><dd>Introduce the generated task set into the system</dd>
+                <dt>Encrypt Input</dt><dd>Enable the Input and AES Tasks; every input (entered with ENTER), will be encrypted and descrypted 250 times, and the result will be posted to the console.</dd>
+                <dt>Animate Box</dt><dd>Enables or disables the box-animation, i.e. stops the box from moving</dd>
+            </dl>
+        </div>
+    </div>
     <div id="info">
+        <a href="javascript:rtjsHelp();" class="help" title="Help">?</a>
+        <input type="number" id="timeTest" name="timeTest" value="60" style="width:6em" onchange="rtjsTestTimeChange();"/>
+        <label for="timeTest" id="timeTestLabel">Step Length (Seconds)</label>
+        <br />
         <input type="checkbox" id="toggleTest" name="toggleTest" />
         <label for="toggleTest" id="toggleTestLabel">Run Benchmark</label>
         <br />

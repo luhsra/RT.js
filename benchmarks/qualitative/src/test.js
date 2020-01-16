@@ -3,7 +3,7 @@ const { submitAES } = require ("./inputTask")
 const Plotly = require('plotly.js-basic-dist');
 
 // every stage 60 seconds
-var StepTime = 60000 //60000
+//var StepTime = 60000 //60000
 var dicTime = 500 // half a second
 
 var InternalState = 0;
