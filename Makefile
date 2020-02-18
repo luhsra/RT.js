@@ -1,11 +1,11 @@
 all: build
 
 build:
-	@./node_modules/.bin/tsc
-	@chmod a+x build/transpiler/*
+	@npm run build-ts
+	@chmod a+x build/transpiler/rtjs-transpiler.js
 
 build-watch:
-	@./node_modules/.bin/tsc --watch
+	@npm run watch-ts
 
 build-qualitative-benchmark:
 	make -C benchmarks/qualitative
