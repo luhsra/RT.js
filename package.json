@@ -1,15 +1,19 @@
 {
-  "name": "rtjs",
-  "version": "0.9.0",
-  "description": "A real-time capable pseudo-preemptive scheduler for JavaScript",
+    "name": "rt.js",
+    "version": "0.9.0",
+    "description": "RT.js: A real-time capable pseudo-preemptive scheduler for JavaScript",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/luhsra/RT.js"
+    },
+    "keywords": [
+        "Real-Time Scheduling"
+    ],
   "main": "build/index.js",
   "bin": {
     "osek-transpiler": "build/transpiler/osek-transpiler.js",
     "osek-runner": "build/transpiler/runner.js",
     "raw-runner": "build/transpiler/raw-runner.js"
-  },
-  "scripts": {
-    "test": "make test"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
