@@ -67,7 +67,7 @@ async function compileTasks() {
     print("Compiled tasks")
 }
 
-async function runTasks(files, osek, policy) {
+async function runTasks(files, rtjs, policy) {
     let simulateInteraction = process.env.SIMULATE_INTERACTION && JSON.parse(process.env.SIMULATE_INTERACTION)
     let maxRunTime = Number(process.env.MAX_RUN_TIME) || 10 * 1000
     let namePrefix = process.env.TASK_PREFIX || ""
@@ -92,7 +92,7 @@ async function runTasks(files, osek, policy) {
             let proc = spawn("node", [file], {
                 env: {
                     PATH: process.env.PATH,
-                    IS_OSEK: osek,
+                    IS_OSEK: rtjs,
                     MAX_RUN_TIME: maxRunTime,
                     SCHEDULE_POLICY: policy,
                     TRACE_FILE: TRACE_FILE,
@@ -167,7 +167,7 @@ async function runRawTasks(taskSet) {
 
     await Promise.all(files.map(async (file) => {
         let c = await read(file, "utf8")
-        return write(file, c.replace(/@osek/gi, ""))
+        return write(file, c.replace(/@rtjs/gi, ""))
     }))
     return runTasks(files, false, 'raw')
 }

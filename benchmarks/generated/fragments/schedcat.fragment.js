@@ -18,11 +18,11 @@ class SchedcatTask__RAND_ID(true)__ extends Task {
         })
     }
 
-    // @osek
+    // @rtjs
     run() {
         while (true) {
             // We have reached our execution time limit
-            if (this.osek.getExecutionTime() >= this.wcet) {
+            if (this.rtjs.getExecutionTime() >= this.wcet) {
                 break
             }
         }
@@ -53,9 +53,9 @@ for (let i = 0; i < definitions__RAND_ID(true)__.length; i++) {
         let job = new SchedcatTask__RAND_ID(true)__(i, task.wcet, priority, deadline)
         job.creationTime += time // We will create the job at that time
         //console.error([time, '+', task.wcet, '<', time+task.period])
-        osek.addAlarm(() => {
-            // job.creationTime = osek.getTime()
-            osek.addTask(job)
+        rtjs.addAlarm(() => {
+            // job.creationTime = rtjs.getTime()
+            rtjs.addTask(job)
             // Singal that all jobs have been enqueued
             jobs_enqueued += 1;
         }, time)
