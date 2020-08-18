@@ -1,7 +1,7 @@
    if (IS_OSEK) {
        __awaiting.push(new Promise((res, reject) => {
            try {
-               osek.start()
+               rtjs.start()
                res()
            } catch (error) {
                reject(error)
@@ -13,12 +13,12 @@
    await Promise.all(__awaiting)
 
 
-   let __end = osek.getTime()
+   let __end = rtjs.getTime()
 
     let output = JSON.stringify({
         config: osekConfig,
         totalTime: Number(__end - __start),
-        schedulerTime: osek.scheduler.schedulerTime,
+        schedulerTime: rtjs.scheduler.schedulerTime,
         jobs: results
     })
 

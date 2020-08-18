@@ -1,4 +1,4 @@
-const { Task, OSEK } = require("../../../build/index")
+const { Task, RTJS } = require("../../../build/index")
 const { performance } = require('perf_hooks')
 const fs = require("fs")
 
@@ -26,7 +26,7 @@ class FakeOSEK {
     _addAndRunTask(task) {
         this.currentTask = task
         this.scheduler.numberOfTasks++
-        task.osek = this
+        task.rtjs = this
 
         task.enqueuedTime = this.getTime()
         let ret = task.run()
@@ -135,11 +135,11 @@ async function main() {
         osekConfig.scheduler.policy = process.env.SCHEDULE_POLICY
     }
 
-    let osek
+    let rtjs
     if (IS_OSEK) {
-        osek = new OSEK(osekConfig)
+        rtjs = new RTJS(osekConfig)
     } else {
-        osek = new FakeOSEK()
+        rtjs = new FakeOSEK()
     }
 
     let maxRunTime = Number(process.env.MAX_RUN_TIME) || 0
@@ -148,4 +148,4 @@ async function main() {
     }
 
     let __awaiting = []
-    let __start = osek.getTime()
+    let __start = rtjs.getTime()
